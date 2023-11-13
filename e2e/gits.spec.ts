@@ -5,6 +5,7 @@ async function login(page) {
   const user = process.env.USER;
   const val = process.env.VALUE;
   console.log(user);
+  console.log(val);
 
   await page.goto('https://github.com/login');
   await page.locator('[id="login_field"]').fill(user);
