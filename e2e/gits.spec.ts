@@ -6,7 +6,7 @@ async function login(page) {
   await page.locator('[id="login_field"]').fill('dhivyamanikandan1@gmail.com');
   await page.locator('[id="password"]').fill('Chellam!1984');
   await page.locator('[name="commit"]').click();
-  await page.locator('button.AppHeader-logo').first().click();
+  await page.locator('button.AppHeader-logo').click();
   await page.locator('a[href="https://gist.github.com/mine"]').first().click();
 };
 
