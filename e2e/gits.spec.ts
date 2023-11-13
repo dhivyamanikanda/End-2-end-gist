@@ -4,6 +4,7 @@ import { test, expect, chromium } from '@playwright/test';
 async function login(page) {
   const user = process.env.USER;
   const val = process.env.VALUE;
+  console.log(user);
 
   await page.goto('https://github.com/login');
   await page.locator('[id="login_field"]').fill(user);
