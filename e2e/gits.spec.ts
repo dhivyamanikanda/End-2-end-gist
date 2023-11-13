@@ -11,7 +11,7 @@ async function login(page) {
 };
 
 
-test('create private gist', async ({ page }) => {
+test.only('create private gist', async ({ page }) => {
   login(page)
   await page.getByLabel('Create new gist').click();
   await page.getByPlaceholder('Gist description…').fill('Desc');
