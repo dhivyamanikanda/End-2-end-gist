@@ -8,8 +8,8 @@ async function login(page) {
   console.log(val);
 
   await page.goto('https://github.com/login');
-  await page.locator('[id="login_field"]').fill('dhivyamanikandan1@gmail.com');
-  await page.locator('[id="password"]').fill('Chellam!1984');
+  await page.locator('[id="login_field"]').pressSequentially('dhivyamanikandan1@gmail.com');
+  await page.locator('[id="password"]').pressSequentially('Chellam!1984');
   await page.locator('[name="commit"]').click();
   await page.screenshot({ path: 'screenshot.png' });
   await page.locator('span > img').click();
