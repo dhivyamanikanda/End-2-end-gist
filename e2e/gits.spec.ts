@@ -11,7 +11,7 @@ async function login(page) {
   await page.locator('[id="login_field"]').fill(user);
   await page.locator('[id="password"]').fill(val);
   await page.locator('[name="commit"]').click();
-  await page.locator('button.AppHeader-logo').click();
+  await page.locator('span > img').click();
   await page.locator('a[href="https://gist.github.com/mine"]').first().click();
 };
 
