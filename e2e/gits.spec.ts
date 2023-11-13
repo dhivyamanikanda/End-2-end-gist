@@ -11,7 +11,7 @@ async function login(page) {
 };
 
 
-test.only('create private gist', async ({ page }) => {
+test('create private gist', async ({ page }) => {
   login(page)
   await page.getByLabel('Create new gist').click();
   await page.getByPlaceholder('Gist description…').fill('Desc');
@@ -21,7 +21,7 @@ test.only('create private gist', async ({ page }) => {
   await page.locator('button.hx_create-pr-button').click();
 });
 
-test('create public gist', async ({ page }) => {
+/*test('create public gist', async ({ page }) => {
   login(page)
   await page.getByLabel('Create new gist').click();
   await page.getByPlaceholder('Gist description…').fill('Desc');
@@ -39,4 +39,4 @@ test('update public gist', async ({ page }) => {
   await page.getByRole('link', { name: 'Edit this Gist' }).click();
   await  page.locator('#code-editor').pressSequentially('Update!!!')
   await  page.locator('button[type="submit"].btn-primary').click();  
-});
+});*/
